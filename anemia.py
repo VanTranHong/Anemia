@@ -31,18 +31,19 @@ target = 'ChildAnemia'
 
 # data1 = dp.modify_data(data,selected,nominal,target)
 # data1.to_csv('preprocessed_anemia.csv')
-print(data1.columns)
+# print(data1.columns)
+print(data1.shape)
 
 
 
-# stats.gen_stats(data1, target ane 
-# n_features = data1.shape[1]-1
+# # stats.gen_stats(data1, target ane c
+# # n_features = data1.shape[1]-1
 
-# # # #################### RUNNING WITHOUT BOOSTING AND BAGGING for all ranking feature selections and CFS###############
-n_seed = 5
-splits =10
-runs = stats.runSKFold(n_seed,splits,data=data1,target=target)
-score.score(rsr.normal_run( n_seed, splits, ['infogain_10'], ['naive_bayes'], runs, n_features),n_seed,splits)
+# # # # #################### RUNNING WITHOUT BOOSTING AND BAGGING for all ranking feature selections and CFS###############
+# n_seed = 5
+# splits =10
+# runs = stats.runSKFold(n_seed,splits,data=data1,target=target)
+# score.score(rsr.normal_run( n_seed, splits, ['infogain_10'], ['naive_bayes'], runs, n_features),n_seed,splits)
 # score.score(sfs_r.subset_run(n_seed, splits,['elasticnet'],['accuracy'],runs,n_features),n_seed,splits)
 # sfs_r.subset_features(n_seed,splits, ['elasticnet'],['accuracy'],runs, n_features)
 # score.score(bbr.boostbag_run(n_seed,splits,['infogain_20'],['elasticnet'],runs,'boost',n_features), n_seed,splits)
