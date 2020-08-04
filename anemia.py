@@ -39,8 +39,8 @@ print(data1.columns)
 # n_features = data1.shape[1]-1
 
 # # # #################### RUNNING WITHOUT BOOSTING AND BAGGING for all ranking feature selections and CFS###############
-n_seed = 1
-splits =2
+n_seed = 5
+splits =10
 runs = stats.runSKFold(n_seed,splits,data=data1,target=target)
 score.score(rsr.normal_run( n_seed, splits, ['infogain_10'], ['naive_bayes'], runs, n_features),n_seed,splits)
 # score.score(sfs_r.subset_run(n_seed, splits,['elasticnet'],['accuracy'],runs,n_features),n_seed,splits)
